@@ -13,7 +13,7 @@ func _disable_plugin():
 
 
 func _enter_tree():
-	var dock = load("res://text_to_d_type.tscn").instantiate()
+	var dock = load("res://addons/text_to_d_type.tscn").instantiate()
 	add_control_to_dock(EditorPlugin.DOCK_SLOT_BOTTOM,dock)
 
 
