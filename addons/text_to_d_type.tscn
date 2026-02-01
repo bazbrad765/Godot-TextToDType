@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bq1n66265cjs1"]
+
+[ext_resource type="Script" uid="uid://ixkjhv4jslcg" path="res://text_to_d_type.gd" id="1_4higk"]
+
+[node name="TextToDType" type="Control" unique_id=1202598645]
+layout_mode = 3
+anchor_right = 3.2
+anchor_bottom = 0.20600002
+offset_bottom = -0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4higk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=687896744]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.94400007
+offset_bottom = 8.063995
+grow_horizontal = 2
+
+[node name="input" type="TextEdit" parent="VBoxContainer" unique_id=1877976221]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer" unique_id=1268356494]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "List"
+popup/item_0/id = 0
+popup/item_1/text = "Dict"
+popup/item_1/id = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="output" type="TextEdit" parent="VBoxContainer" unique_id=1930800309]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="text_changed" from="VBoxContainer/input" to="." method="_on_input_text_changed"]
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
